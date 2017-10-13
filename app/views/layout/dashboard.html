@@ -1,0 +1,27 @@
+<div class="navbar-fixed hide-on-large-only">
+    <nav> 
+        <div class="nav-wrapper blue darken-1">
+            <a data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>    
+</div>
+
+    <ul id="slide-out" class="side-nav fixed blue darken-1">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                <img src="images/background.jpg">
+                </div>
+                <a ><img class="circle" src="images/avatar.png"></a>
+                <a ><span class="white-text name">sebastian arias</span></a>
+                <a ><span class="white-text email">jsarias98@misena.edu.co</span></a>
+            </div>
+        </li>
+        <li ng-class="{activate: $state.includes('Marcas')}"><a ui-sref="Marcas" class="white-text"><i class="material-icons white-text">playlist_add</i>Marcas</a></li>
+        <li ng-class="{activate: $state.includes('Productos')}"><a ui-sref="Productos" class="white-text"><i class="material-icons white-text">shopping_cart</i>Productos</a></li>
+    </ul>
+
+
+<div ui-view class="main">
+    
+</div>

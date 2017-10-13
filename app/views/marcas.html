@@ -1,0 +1,44 @@
+<h2 class="titulo-pagina light-blue right-align white-text {{pageAnimate}}">Gestion de Marcas</h2>
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel {{panelAnimate}}">
+            <div class="panel-heading light-blue">
+                <h3 class="panel-title white-text">{{panel_title_form}}</h3>
+            </div>
+            <div class="panel-body" >
+                <form name="formMarcas" ng-submit="EnviarMarca()">
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <label for="Referencia">Referencia *</label>
+                            <input type="number" ng-model="marca.referencia" id="Referencia" name="Referencia" required>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <label for="Nombre">Nombre *</label>
+                            <input type="text" ng-model="marca.nombre" id="Nombre" name="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn waves-effect waves-light btn-large blue darken-1" ng-disabled="formMarcas.$invalid">{{button_title_form}}</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn waves-effect waves-light btn-large red accent-4" ng-click="cancelar()">cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel panel-default {{panelAnimate}}">
+            <div class="panel-heading light-blue accent-4">
+                <h3 class="panel-title white-text">Lista de Materia Prima</h3>
+            </div>
+            <div class="panel-body" >
+                <div class="gridStyle grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-auto-resize ui-grid-resize-columns ui-grid-move-columns></div>
+            </div>
+        </div>
+    </div>
+</div>

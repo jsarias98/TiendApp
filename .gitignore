@@ -1,0 +1,5 @@
+/node_modules
+/board
+/.tmp
+/.sass-cache
+/bower_components
