@@ -24,7 +24,6 @@ angular.module('tiendAppApp')
     var ref = firebase.database().ref().child('marcas');
     $scope.marcas = $firebaseArray(ref);
     $scope.EnviarMarca = function () {
-      
       if ($scope.panel_title_form == 'Registro de marcas'){
         $scope.marcas.$add({
           referencia: $scope.marca.referencia,
